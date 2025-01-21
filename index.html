@@ -19,6 +19,7 @@
                 <th>Server ID</th>
                 <th>CPU Usage (%)</th>
                 <th>Memory Usage (%)</th>
+                <th>Disk Usage (%)</th>
                 <th>Timestamp</th>
             </tr>
         </thead>
@@ -26,26 +27,32 @@
     </table>
 
     <script>
-        async function loadStatus() {
-            const response = await fetch('data.json'); // 讀取 JSON 資料
+        async function fetchData() {
+            // 讀取 data.json 文件
+            const response = await fetch('data.json');
             const data = await response.json();
 
             const tableBody = document.querySelector('#statusTable tbody');
-            tableBody.innerHTML = '';
+            tableBody.innerHTML = ''; // 清空表格內容
 
+            // 遍歷 JSON 數據並添加到表格
             data.forEach(item => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${item.server_id}</td>
                     <td>${item.cpu_usage.toFixed(2)}</td>
                     <td>${item.memory_usage.toFixed(2)}</td>
+                    <td>${item.disk_usage.toFixed(2)}</td>
                     <td>${item.timestamp}</td>
                 `;
                 tableBody.appendChild(row);
             });
         }
 
-        loadStatus();
+        fetchData(); // 初始化數據加載
+
+        // 每隔 60 秒重新加載數據
+        setInterval(fetchData, 60000);
     </script>
 </body>
 </html>
