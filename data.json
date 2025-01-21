@@ -1,89 +1,9 @@
 [
   {
     "server_id": "server1116",
-<<<<<<< Updated upstream
-    "cpu_usage": 51.6,
-    "memory_usage": 1.57973,
-    "disk_usage": 93,
-    "timestamp": "2025-01-21 17:58:51"
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 51.6,
-    "memory_usage": 1.58028,
-    "disk_usage": 93,
-    "timestamp": "2025-01-21 17:58:58"
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 51.6,
-    "memory_usage": 1.58828,
-    "disk_usage": 93,
-    "timestamp": "2025-01-21 18:00:54"
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 51.6,
-    "memory_usage": 1.58866,
-    "disk_usage": 93,
-    "timestamp": "2025-01-21 18:01:00"
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 51.3,
-    "memory_usage": 0.675604,
-    "disk_usage": 93,
-    "timestamp": "2025-01-21 19:43:56"
-  },
-  {
-    "server_id": "server1116",
-<<<<<<< Updated upstream
-    "cpu_usage": 1.6,
-    "memory_usage": 9.10395,
-    "disk_usage": 100,
-    "timestamp": "2025-01-21 20:08:42"
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 1.6,
-    "memory_usage": 9.12607,
-    "disk_usage": 100,
-    "timestamp": "2025-01-21 20:09:04"
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 1.6,
-    "memory_usage": 9.16613,
-    "disk_usage": 100,
-    "timestamp": "2025-01-21 20:09:46"
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 1.6,
-    "memory_usage": 9.17778,
-    "disk_usage": 100,
-    "timestamp": "2025-01-21 20:09:55"
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
     "cpu_usage": 51.2,
-    "memory_usage": 1.78297,
+    "memory_usage": 1.82048,
     "disk_usage": 93,
-<<<<<<< Updated upstream
-    "timestamp": "2025-01-21 20:11:28"
->>>>>>> Stashed changes
-=======
-  },
-  {
-    "server_id": "server1116",
-    "cpu_usage": 1.6,
-    "memory_usage": 9.30401,
-    "disk_usage": 100,
-    "timestamp": "2025-01-21 20:12:05"
->>>>>>> Stashed changes
-=======
-    "timestamp": "2025-01-21 20:15:32"
->>>>>>> Stashed changes
+    "timestamp": "2025-01-21 20:16:32"
   }
 ]
