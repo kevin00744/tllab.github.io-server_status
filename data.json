@@ -1,0 +1,15 @@
+[
+  {
+    "server_id": "server1",
+    "cpu_usage": 52.5,
+    "memory_usage": 1.6497,
+    "timestamp": "2025-01-21 12:46:56"
+  },
+  {
+    "server_id": "server1",
+    "cpu_usage": 52.5,
+    "memory_usage": 1.3442,
+    "disk_usage": 627181520,
+    "timestamp": "2025-01-21 12:55:26"
+  }
+]
