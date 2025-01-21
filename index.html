@@ -42,7 +42,7 @@
                     <td>${item.server_id}</td>
                     <td>${item.cpu_usage.toFixed(2)}</td>
                     <td>${item.memory_usage.toFixed(2)}</td>
-                    <td>${item.disk_usage.toFixed(2)}</td>
+                    <td>${item.disk_usage?.toFixed(2) || 'N/A'}</td> 
                     <td>${item.timestamp}</td>
                 `;
                 tableBody.appendChild(row);

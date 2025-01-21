@@ -36,6 +36,7 @@
   },
   {
     "server_id": "server1116",
+<<<<<<< Updated upstream
     "cpu_usage": 1.6,
     "memory_usage": 9.10395,
     "disk_usage": 100,
@@ -61,5 +62,11 @@
     "memory_usage": 9.17778,
     "disk_usage": 100,
     "timestamp": "2025-01-21 20:09:55"
+=======
+    "cpu_usage": 51.2,
+    "memory_usage": 3.18756,
+    "disk_usage": 93,
+    "timestamp": "2025-01-21 20:11:28"
+>>>>>>> Stashed changes
   }
 ]
