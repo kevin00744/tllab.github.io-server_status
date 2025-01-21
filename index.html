@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Server Status</h1>
+    <table id="statusTable">
+        <thead>
+            <tr>
+                <th>Server ID</th>
+                <th>CPU Usage (%)</th>
+                <th>Memory Usage (%)</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        async function loadStatus() {
+            const response = await fetch('data.json'); // 讀取 JSON 資料
+            const data = await response.json();
+
+            const tableBody = document.querySelector('#statusTable tbody');
+            tableBody.innerHTML = '';
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.server_id}</td>
+                    <td>${item.cpu_usage.toFixed(2)}</td>
+                    <td>${item.memory_usage.toFixed(2)}</td>
+                    <td>${item.timestamp}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        loadStatus();
+    </script>
+</body>
+</html>
