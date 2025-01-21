@@ -2,42 +2,8 @@
   {
     "server_id": "server1",
     "cpu_usage": 52.5,
-    "memory_usage": 1.6497,
-    "timestamp": "2025-01-21 12:46:56"
-  },
-  {
-    "server_id": "server1",
-    "cpu_usage": 52.5,
-    "memory_usage": 1.3442,
-    "disk_usage": 627181520,
-    "timestamp": "2025-01-21 12:55:26"
-  },
-  {
-    "server_id": "server1",
-    "cpu_usage": 52.5,
-    "memory_usage": 1.06947,
-    "disk_usage": 627180528,
-    "timestamp": "2025-01-21 13:01:52"
-  },
-  {
-    "server_id": "server1",
-    "cpu_usage": 52.5,
-    "memory_usage": 1.06459,
+    "memory_usage": 1.13357,
     "disk_usage": 599,
-    "timestamp": "2025-01-21 13:08:57"
-  },
-  {
-    "server_id": "server1",
-    "cpu_usage": 52.5,
-    "memory_usage": 1.13182,
-    "disk_usage": 599,
-    "timestamp": "2025-01-21 13:11:09"
-  },
-  {
-    "server_id": "server1",
-    "cpu_usage": 52.5,
-    "memory_usage": 1.13274,
-    "disk_usage": 599,
-    "timestamp": "2025-01-21 13:12:39"
+    "timestamp": "2025-01-21 13:13:53"
   }
 ]
