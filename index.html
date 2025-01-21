@@ -39,20 +39,18 @@
                     const response = await fetch(file);
                     const data = await response.json();
 
-                    // 僅取得最後一筆數據
-                    // const lastRecord = data[data.length - 1];
-
-                    // if (lastRecord) {
+                    // 將每一筆數據插入表格
+                    data.forEach(record => {
                         const row = document.createElement('tr');
                         row.innerHTML = `
-                            <td>${lastRecord.server_id || 'N/A'}</td>
-                            <td>${lastRecord.cpu_usage?.toFixed(2) || 'N/A'}</td>
-                            <td>${lastRecord.memory_usage?.toFixed(2) || 'N/A'}</td>
-                            <td>${lastRecord.disk_usage?.toFixed(2) || 'N/A'}</td>
-                            <td>${lastRecord.timestamp || 'N/A'}</td>
+                            <td>${record.server_id || 'N/A'}</td>
+                            <td>${record.cpu_usage?.toFixed(2) || 'N/A'}</td>
+                            <td>${record.memory_usage?.toFixed(2) || 'N/A'}</td>
+                            <td>${record.disk_usage?.toFixed(2) || 'N/A'}</td>
+                            <td>${record.timestamp || 'N/A'}</td>
                         `;
                         tableBody.appendChild(row);
-                    // }
+                    });
                 } catch (error) {
                     console.error(`無法加載 ${file}:`, error);
                 }
@@ -62,7 +60,7 @@
         fetchData(); // 初始化數據加載
 
         // 每隔 60 秒重新加載數據
-        setInterval(fetchData, 5000);
+        setInterval(fetchData, 60000);
     </script>
 </body>
 </html>
