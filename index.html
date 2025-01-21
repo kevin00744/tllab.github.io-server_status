@@ -28,7 +28,7 @@
 
     <script>
         // 伺服器 JSON 文件列表
-        const serverFiles = ["1116.json", "1111.json", "1112.json"]; // 添加伺服器文件名
+        const serverFiles = ["server1.json", "server2.json", "server3.json"]; // 添加伺服器文件名
 
         async function fetchData() {
             const tableBody = document.querySelector('#statusTable tbody');
@@ -61,7 +61,7 @@
 
         fetchData(); // 初始化數據加載
 
-        // 每隔 5 秒重新加載數據
+        // 每隔 60 秒重新加載數據
         setInterval(fetchData, 5000);
     </script>
 </body>
