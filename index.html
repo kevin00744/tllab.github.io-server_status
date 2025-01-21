@@ -40,9 +40,9 @@
                     const data = await response.json();
 
                     // 僅取得最後一筆數據
-                    const lastRecord = data[data.length - 1];
+                    // const lastRecord = data[data.length - 1];
 
-                    if (lastRecord) {
+                    // if (lastRecord) {
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td>${lastRecord.server_id || 'N/A'}</td>
@@ -52,7 +52,7 @@
                             <td>${lastRecord.timestamp || 'N/A'}</td>
                         `;
                         tableBody.appendChild(row);
-                    }
+                    // }
                 } catch (error) {
                     console.error(`無法加載 ${file}:`, error);
                 }
