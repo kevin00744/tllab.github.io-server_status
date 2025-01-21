@@ -12,5 +12,12 @@
     "memory_usage": 1.58028,
     "disk_usage": 93,
     "timestamp": "2025-01-21 17:58:58"
+  },
+  {
+    "server_id": "server1116",
+    "cpu_usage": 51.6,
+    "memory_usage": 1.58828,
+    "disk_usage": 93,
+    "timestamp": "2025-01-21 18:00:54"
   }
 ]
