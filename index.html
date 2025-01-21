@@ -19,7 +19,7 @@
                 <th>Server ID</th>
                 <th>CPU Usage (%)</th>
                 <th>Memory Usage (%)</th>
-                <th>Disk Free (Gbs)</th>
+                <th>Disk Usage (Gbs)</th>
                 <th>Timestamp</th>
             </tr>
         </thead>
@@ -52,7 +52,7 @@
         fetchData(); // 初始化數據加載
 
         // 每隔 60 秒重新加載數據
-        setInterval(fetchData, 60000);
+        setInterval(fetchData, 10000);
     </script>
 </body>
 </html>
