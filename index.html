@@ -19,7 +19,7 @@
                 <th>Server ID</th>
                 <th>CPU Usage (%)</th>
                 <th>Memory Usage (%)</th>
-                <th>Disk Usage (Gbs)</th>
+                <th>Disk Usage (%)</th>
                 <th>Timestamp</th>
             </tr>
         </thead>
@@ -27,32 +27,42 @@
     </table>
 
     <script>
-        async function fetchData() {
-            // 讀取 data.json 文件
-            const response = await fetch('data.json');
-            const data = await response.json();
+        // 伺服器 JSON 文件列表
+        const serverFiles = ["server1.json", "server2.json", "server3.json"]; // 添加伺服器文件名
 
+        async function fetchData() {
             const tableBody = document.querySelector('#statusTable tbody');
             tableBody.innerHTML = ''; // 清空表格內容
 
-            // 遍歷 JSON 數據並添加到表格
-            data.forEach(item => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${item.server_id}</td>
-                    <td>${item.cpu_usage.toFixed(2)}</td>
-                    <td>${item.memory_usage.toFixed(2)}</td>
-                    <td>${item.disk_usage?.toFixed(2) || 'N/A'}</td> 
-                    <td>${item.timestamp}</td>
-                `;
-                tableBody.appendChild(row);
-            });
+            for (const file of serverFiles) {
+                try {
+                    const response = await fetch(file);
+                    const data = await response.json();
+
+                    // 僅取得最後一筆數據
+                    const lastRecord = data[data.length - 1];
+
+                    if (lastRecord) {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${lastRecord.server_id || 'N/A'}</td>
+                            <td>${lastRecord.cpu_usage?.toFixed(2) || 'N/A'}</td>
+                            <td>${lastRecord.memory_usage?.toFixed(2) || 'N/A'}</td>
+                            <td>${lastRecord.disk_usage?.toFixed(2) || 'N/A'}</td>
+                            <td>${lastRecord.timestamp || 'N/A'}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    }
+                } catch (error) {
+                    console.error(`無法加載 ${file}:`, error);
+                }
+            }
         }
 
         fetchData(); // 初始化數據加載
 
         // 每隔 60 秒重新加載數據
-        setInterval(fetchData, 10000);
+        setInterval(fetchData, 60000);
     </script>
 </body>
 </html>
