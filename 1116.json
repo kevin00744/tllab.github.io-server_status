@@ -698,5 +698,12 @@
     "memory_usage": 19.2217,
     "disk_free": 598,
     "timestamp": "2025-01-22 00:07:01"
+  },
+  {
+    "server_id": "1116",
+    "cpu_usage": 1,
+    "memory_usage": 19.3226,
+    "disk_free": 598,
+    "timestamp": "2025-01-22 00:08:02"
   }
 ]
