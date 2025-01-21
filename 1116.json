@@ -5,5 +5,26 @@
     "memory_usage": 3.41624,
     "disk_usage": 93,
     "timestamp": "2025-01-21 20:23:17"
+  },
+  {
+    "server_id": "1116",
+    "cpu_usage": 51.1,
+    "memory_usage": 2.44474,
+    "disk_usage": 93,
+    "timestamp": "2025-01-21 20:33:48"
+  },
+  {
+    "server_id": "1116",
+    "cpu_usage": 51.1,
+    "memory_usage": 2.48515,
+    "disk_usage": 93,
+    "timestamp": "2025-01-21 20:34:49"
+  },
+  {
+    "server_id": "1116",
+    "cpu_usage": 51.1,
+    "memory_usage": 2.5211,
+    "disk_usage": 93,
+    "timestamp": "2025-01-21 20:35:38"
   }
 ]
